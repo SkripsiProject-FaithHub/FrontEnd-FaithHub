@@ -31,23 +31,6 @@ const Layout = () => {
 
     
   }, []);
-  // return (
-  //   <>
-  //     <Navbar />
-  //     <div className="flex dark:bg-[#131324]">
-  //       <Sidebar />
-  //       <div className="w-full md:w-[85%] flex flex-col items-center">
-  //         <Outlet />
-  //       </div>
-  //       <CreateButton />
-  //           <div
-  //             className="mt-8  py-4 px-3 rounded-md flex
-  //        flex-col items-start gap-5"
-  //           ></div>
-  //     </div>
-  //   </>
-  // );
-
   const createButtonConfig = {
     "/": { label: "Ask a Question", navigateTo: "/ask" },
     "/article": { label: "Post an Article", navigateTo: "/post" }

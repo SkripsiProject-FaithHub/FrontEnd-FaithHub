@@ -28,7 +28,7 @@ const QuestionDetail = () => {
           headers: { Authorization: `Bearer ${token}` },
         };
         const res = await axios.get(
-          `http://localhost:9001/api/question/getDetail/${questionId}`,
+          `https://faithhub-skripsi-backend.vercel.app/api/question/getDetail/${questionId}`,
           config
         );
         const { questionData, ownerInfo, replies } = res.data;
@@ -53,7 +53,7 @@ const QuestionDetail = () => {
         headers: { Authorization: `Bearer ${token}` },
       };
       await axios.post(
-        `http://localhost:9001/api/question/reply/${questionId}`,
+        `https://faithhub-skripsi-backend.vercel.app/api/question/reply/${questionId}`,
         { reply: newReply },
         config
       );
@@ -71,7 +71,7 @@ const QuestionDetail = () => {
         headers: { Authorization: `Bearer ${token}` },
       };
       const res = await axios.get(
-        `http://localhost:9001/api/question/getDetail/${questionId}`,
+        `https://faithhub-skripsi-backend.vercel.app/api/question/getDetail/${questionId}`,
         config
       );
       setRepliesData(res.data.replies);
@@ -86,7 +86,7 @@ const QuestionDetail = () => {
       headers: { Authorization: "Bearer " + token},
     };
     // console.log(config);
-    const res = await axios.get("http://localhost:9001/api/auth/myProfile", config);
+    const res = await axios.get('https://faithhub-skripsi-backend.vercel.app/api/auth/myProfile', config);
     // console.log(res);
     return res.data;
   };
