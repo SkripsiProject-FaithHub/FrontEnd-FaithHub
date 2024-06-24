@@ -15,7 +15,7 @@ const Arrowdown = ({ id }) => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `http://localhost:9001/api/question/vote/${id}`,
+        `https://faithhub-skripsi-backend.vercel.app/api/question/vote/${id}`,
         body,
         config
       );

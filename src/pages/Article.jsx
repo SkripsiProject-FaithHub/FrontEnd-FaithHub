@@ -31,7 +31,7 @@ const Content = () => {
     };
     const body = { tags: tags };
 
-    let url = "http://localhost:9001/api/article/get/all";
+    let url = 'https://faithhub-skripsi-backend.vercel.app/api/article/get/all';
 
     
     const res = await axios.get(url,config);
@@ -63,7 +63,7 @@ const Content = () => {
             onClick={() => navigate(`/article/${article.articleDetails.articleId}`)}
             style={{ cursor: "pointer" }}
           >
-            <div className=" w-full bg-white dark:bg-[#1E212A] p-4 md:p-5 rounded-lg shadow-md flex items-start gap-5 border-2 hover:bg-gray-200 transition-all ">
+            <div className=" w-full bg-white dark:bg-[#1E212A] p-4 md:p-5 rounded-lg shadow-md flex items-start gap-5 border-2 hover:bg-gray-200 transition-all hover:scale-105 ">
               {/* <div className="left-section space-y-1 text-center">
                 <Arrowup id={article.articleDetails.articleId} />
                 <h3 className="text-sm md:text-base">

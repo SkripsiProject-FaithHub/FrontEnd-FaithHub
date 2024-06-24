@@ -23,7 +23,7 @@ const CreateArticle = () => {
         headers: { Authorization: `Bearer ${token}` },
       };
       const res = await axios.post(
-        `http://localhost:9001/api/article/createArticle`,
+        `https://faithhub-skripsi-backend.vercel.app/api/article/createArticle`,
         body,
         config
       );

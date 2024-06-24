@@ -12,20 +12,10 @@ const UserInfo = ({ openId, index, setOpenId, question, answer }) => {
       headers: { Authorization: "Bearer " + token},
     };
     // console.log(config);
-    const res = await axios.get("http://localhost:9001/api/auth/myProfile", config);
+    const res = await axios.get('https://faithhub-skripsi-backend.vercel.app/api/auth/myProfile', config);
     // console.log(res);
     return res.data;
   };
-  // const fetchReply = async () => {
-  //   const token = localStorage.getItem("token");
-  //   const config = {
-  //     headers: { Authorization: "Bearer " + token},
-  //   };
-  //   // console.log(config);
-  //   const res = await axios.get("http://localhost:9001/api/auth/myProfile", config);
-  //   // console.log(res);
-  //   return res.data;
-  // };
   const { isLoading,data } = useQuery("getUserInfo", fetchUser);
   if (isLoading) return <Loading />;
   const currentUser = data;
